@@ -35,7 +35,7 @@
     "href": "resume.html",
     "title": "Madison Loutensock’s CV",
     "section": "",
-    "text": "Data Science\n\nmadl141900@gmail.com\n\n\n\nI am a junior majoring in Data Science at Brigham Young University - Idaho.\n\n\nSQL, R, Python, Excel, C#, Tableau\n\n\n\n\nJanuary 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
+    "text": "Data Science\n\nmadl141900@gmail.com\n\n\n\nI am a junior majoring in Data Science at Brigham Young University - Idaho.\n\n\nSQL, R, Python, Excel, C#, Tableau\n\n\n\n\nJanuary 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah\n\n\n\n\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
   },
   {
     "objectID": "resume.html#currently",
@@ -291,6 +291,17 @@
     "crumbs": [
       "Story Telling",
       "Project 3"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html",
+    "href": "Cleansing_Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
     ]
   }
 ]
