@@ -4,7 +4,12 @@ subtitle: "my data science portfolio"
 # use quarto markdown to 
 ---
 
-# Title 1 Header
-## Title 2 Header
+# Data Exploration
 
-[MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+This section contains projects highlighting my skills in data exploration and visualization.
+
+## Projects
+
+__Project 1__: Is Reading Comprehension Declining?
+
+In this analysis, I explored the trend of reading comprehension across the world and compared it to a study on whether medium has an affect on comprehension.

@@ -52,13 +52,6 @@
     "text": "January 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah"
   },
   {
-    "objectID": "resume.html#awards",
-    "href": "resume.html#awards",
-    "title": "Madison Loutensock’s CV",
-    "section": "",
-    "text": "2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France"
-  },
-  {
     "objectID": "resume.html#occupation",
     "href": "resume.html#occupation",
     "title": "Madison Loutensock’s CV",
@@ -152,26 +145,220 @@
     ]
   },
   {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Cleansing_Exploration/w13_task3.html",
+    "href": "Cleansing_Exploration/w13_task3.html",
+    "title": "Is Reading Comprehension Declining?",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "text": "pacman::p_load(tidyverse, readr, readxl, downloader, rio, plotly, knitr, pander, ggthemes, ggrepel, directlabels, ggtext, scales, lubridate, riem, mosaic, DT, forcats, stringr, stringi, pander)\n\nreading &lt;- read_csv(unz(\"C:\\\\Users\\\\madl1\\\\Downloads\\\\share-of-children-reaching-sufficient-reading-comprehension-by-the-end-of-lower-secondary-age.zip\", \"share-of-children-reaching-sufficient-reading-comprehension-by-the-end-of-lower-secondary-age.csv\"))\n\ndiff_media &lt;- rio::import(\"C:/Users/madl1/Downloads/mediumeffect.csv\")",
     "crumbs": [
-      "Data Cleansing",
-      "Project 3"
+      "Data Exploration",
+      "Is Reading Comprehension Declining?"
     ]
   },
   {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
+    "objectID": "Cleansing_Exploration/w13_task3.html#hypotheses",
+    "href": "Cleansing_Exploration/w13_task3.html#hypotheses",
+    "title": "Is Reading Comprehension Declining?",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nMy main question for the chi-squared test is: Does medium have an effect on reading comprehension?\nI will test this against a level of significance of 0.05, meaning if my results are below 0.05, I will have enough evidence to reject the null hypothesis.\n\\[Ho: \\text{There is no relationship between reading comprehension score and medium}\\] \\[Ha: \\text{There is a relationship between reading comprehension score and medium}\\] \\[\\alpha = 0.05\\]",
+    "crumbs": [
+      "Data Exploration",
+      "Is Reading Comprehension Declining?"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/w13_task3.html#visualizations",
+    "href": "Cleansing_Exploration/w13_task3.html#visualizations",
+    "title": "Is Reading Comprehension Declining?",
+    "section": "Visualizations",
+    "text": "Visualizations\n\nclean_media &lt;- diff_media %&gt;%\n  mutate(\n    gender = case_when(\n      gender == 1 ~ \"female\",\n      gender == 2 ~ \"male\"\n    ),\n    medium = case_when(\n      medium == 1 ~ \"digital\",\n      medium == 2 ~ \"print\"\n    ),\n    medium = factor(medium, levels = c(\"print\", \"digital\")),\n    RC_score = case_when(\n      RC_score == 0 ~ \"incorrect\",\n      RC_score == 1 ~ \"correct\"\n    )\n  ) %&gt;%\n  drop_na(RC_score)\n\n\nreading_table &lt;- table(clean_media$medium, clean_media$RC_score)\npander(reading_table)\n\n\n\n\n\n\n\n\n\n \ncorrect\nincorrect\n\n\n\n\nprint\n440\n569\n\n\ndigital\n372\n643\n\n\n\n\n\n\nggplot(clean_media, aes(x = RC_score, fill = medium)) +\n  geom_bar(position = \"dodge\") +\n  scale_fill_manual(values = c(\"steelblue\", \"firebrick\")) +\n  theme_minimal() +\n  labs(\n    title = \"Reading Comprehension for Norwegian Secondary Students \\nWorsens with Digital Mediums\",\n    x = \"Reading Comp Score\",\n    y = \"Count\",\n    fill = \"Medium\"\n  ) +\n  theme(\n    text = element_text(family = \"serif\"),\n    axis.line = element_line(),\n    axis.text = element_text(size = 10),\n    legend.position = \"top\",\n    legend.text = element_text(size = 10),\n    legend.title = element_text(face = \"bold\"),\n    plot.title = element_text(face = \"bold\")\n  )\n\n\n\n\n\n\n\n\nThe above table shows the results of the study, which are visualized in this bar chart. Here we can see that the number of correct answers went down when the students read the digital articles and, subsequently, the number of incorrect answers increased. It is also worth noting that the incorrect answers greatly outnumber the correct answers, no matter what medium is used.",
+    "crumbs": [
+      "Data Exploration",
+      "Is Reading Comprehension Declining?"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/w13_task3.html#check-requirements",
+    "href": "Cleansing_Exploration/w13_task3.html#check-requirements",
+    "title": "Is Reading Comprehension Declining?",
+    "section": "Check Requirements",
+    "text": "Check Requirements\n\nreadingchi &lt;- chisq.test(reading_table)\npander(readingchi$expected)\n\n\n\n\n\n\n\n\n\n \ncorrect\nincorrect\n\n\n\n\nprint\n404.8\n604.2\n\n\ndigital\n407.2\n607.8\n\n\n\n\n\nIn order for a chi-squared test to be appropriate the expected counts (shown in this table) must all be above 5. That requirement is satisfied here, so we can trust the results of our test.",
+    "crumbs": [
+      "Data Exploration",
+      "Is Reading Comprehension Declining?"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/w13_task3.html#chi-squared-test",
+    "href": "Cleansing_Exploration/w13_task3.html#chi-squared-test",
+    "title": "Is Reading Comprehension Declining?",
+    "section": "Chi-squared Test",
+    "text": "Chi-squared Test\n\npander(readingchi)\n\n\nPearson’s Chi-squared test with Yates’ continuity correction: reading_table\n\n\n\n\n\n\n\nTest statistic\ndf\nP value\n\n\n\n\n9.907\n1\n0.001646 * *\n\n\n\n\n\nAfter performing a chi-squared test, we got a p-value of 0.001646 which is less than our previously stated alpha (0.05), which means we reject the null hypothesis. We have sufficient evidence to conclude that there is a relationship between reading comprehension score and medium.\n\npander(readingchi$residuals)\n\n\n\n\n\n\n\n\n\n \ncorrect\nincorrect\n\n\n\n\nprint\n1.75\n-1.432\n\n\ndigital\n-1.745\n1.428\n\n\n\n\n\nThis final table shows how the actual test results differed from what was expected if there was no relationship. It supports our findings from the visualizations that scores were worse with the digital articles, as there were less correct answers and more incorrect answers than expected, while the opposite occurred for the printed articles.",
+    "crumbs": [
+      "Data Exploration",
+      "Is Reading Comprehension Declining?"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/project2.html",
+    "href": "Cleansing_Exploration/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Analysis_Projects/Semester_Project_Template.html",
+    "href": "Analysis_Projects/Semester_Project_Template.html",
+    "title": "A Study in Factors on Musical Performance",
+    "section": "",
+    "text": "Introduction\nThroughout my life, I have had many experiences with private music lessons. I took private piano lessons for about 8 years and, recently, I have been working as a private piano teacher for the last 4 years. Therefore, I am very interested in analyzing what makes a lesson the most effective, so that I can be the an effective teacher.\nMy main research question is: “What factors in a private music lesson will help increase a student’s performance?”\nThe sub-questions I will be focusing on are: Do students who have a longer duration of lessons tend to get better performance scores than others? Do students whose lessons focus on playing the instrument(practicality) tend to get better performance scores than those who focus on the theory? Does the age of the student affect their performance score?\n\n\nDesign the Study\nFor this analysis, I will be using data taken from a study done on Music Education Performance, where a variety of possible factors were tested, as well as an overall performance score. I will be looking at both quantitative and categorical data and I expect to do at least one t.test and an ANOVA test. The population for this analysis is all people who take private music lessons.\nResponse Variable: Performance Score\nPossible Explanatory Variables:\n1.Duration - Quantitative\n2.Lesson Type - Categorical\n3.Age - Categorical\n\n\nCollect the Data\nWhen I was first looking for data to analyze, my research question was “Does taking music lessons increase general education performance?” However, as I was looking into different data sets, I was drawn to this one about what affects musical performance. Due to the focus of the data being different from my original question, I had to adjust what I planned to research. I found the data through the website Kaggle, and the data was gathered in December of 2024.\n\n\nDescribe/Summarize the Data\n\n#read in libraries and dataset\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(mosaic)\n\nRegistered S3 method overwritten by 'mosaic':\n  method                           from   \n  fortify.SpatialPolygonsDataFrame ggplot2\n\nThe 'mosaic' package masks several functions from core packages in order to add \nadditional features.  The original behavior of these functions should not be affected by this.\n\nAttaching package: 'mosaic'\n\nThe following object is masked from 'package:Matrix':\n\n    mean\n\nThe following objects are masked from 'package:dplyr':\n\n    count, do, tally\n\nThe following object is masked from 'package:purrr':\n\n    cross\n\nThe following object is masked from 'package:ggplot2':\n\n    stat\n\nThe following objects are masked from 'package:stats':\n\n    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,\n    quantile, sd, t.test, var\n\nThe following objects are masked from 'package:base':\n\n    max, mean, min, prod, range, sample, sum\n\nlibrary(rio)\n\nWarning: package 'rio' was built under R version 4.4.3\n\n\n\nAttaching package: 'rio'\n\nThe following object is masked from 'package:mosaic':\n\n    factorize\n\nlibrary(ggplot2)\nlibrary(readr)\nlibrary(car)\n\nLoading required package: carData\n\nAttaching package: 'car'\n\nThe following objects are masked from 'package:mosaic':\n\n    deltaMethod, logit\n\nThe following object is masked from 'package:dplyr':\n\n    recode\n\nThe following object is masked from 'package:purrr':\n\n    some\n\nsetwd(\"C:/Users/madl1/OneDrive/Desktop/Student_Work/6-Semester_Project\")\n\nmusic &lt;- read_csv(\"music_education_dataset.csv\")\n\nRows: 100 Columns: 22\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (5): Student_ID, Gender, Class_Level, Lesson_Type, Instrument_Type\ndbl  (16): Age, Accuracy, Rhythm, Tempo, Pitch_Accuracy, Duration, Volume, H...\ndttm  (1): Timestamp\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nview(music)\n\n#clean up data\nunique(music$Lesson_Type)\n\n[1] \"Theory\"    \"Practical\"\n\nunique(music$Age)\n\n[1] 12 11 13 16 15 14 10 17\n\nclean_music &lt;- music %&gt;%\n  filter(Performance_Score &gt;= 60,\n         Performance_Score &lt;= 100) %&gt;%\n  select(Performance_Score, Duration, Lesson_Type, Age, Stress_Level)\n\nview(clean_music)\n\n\n\nMake Inference\n\nAnalyzing the linear relationship between performance score and duration of play time in lessons\n\\[H_0:  \\beta = 0\\]\n\\[H_a:\\beta &gt; 0\\] \\[\\alpha = 0.05 \\]\n\n#explore and visualize data\nggplot(clean_music, aes(y = Performance_Score, x = Duration)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    title = \"Relationship Between Duration of Play Time and Performance Scores\"\n  ) +\n  theme_bw()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nThe scatterplot seems to have points all over the graph. There is a slight linear relationship but it is a very weak negative one.\n\n#correlation coefficient\ncor(clean_music$Performance_Score ~ clean_music$Duration)\n\n[1] -0.03752925\n\n#testing for linear regression\nlm_music &lt;- lm(clean_music$Performance_Score ~ clean_music$Duration)\nsummary(lm_music)\n\n\nCall:\nlm(formula = clean_music$Performance_Score ~ clean_music$Duration)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-19.6041 -10.0096   0.0233   9.5801  19.4098 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)          81.679254   3.608076  22.638   &lt;2e-16 ***\nclean_music$Duration -0.003459   0.009303  -0.372    0.711    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 11.8 on 98 degrees of freedom\nMultiple R-squared:  0.001408,  Adjusted R-squared:  -0.008781 \nF-statistic: 0.1382 on 1 and 98 DF,  p-value: 0.7109\n\n\nCorrelation Coefficient(r): -0.038, which is a very weak negative relationship\nSlope: -0.003459\nIntercept: 81.679254\np-value: 0.711\nInterpretation: The p-value is not less than alpha(0.05), therefore I fail to reject the null hypothesis. I do not have sufficient evidence to suggest that the duration of play time in lessons has an effect on a student’s performance score.\n\n#confidence interval\nconfint(lm_music, level = 0.95)\n\n                           2.5 %      97.5 %\n(Intercept)          74.51914482 88.83936395\nclean_music$Duration -0.02191961  0.01500241\n\n\nConfidence Interval: I am 95% confident that the true slope of the relationship between duration and performance score is between -0.022 and 0.015. For every one second more play time in a lesson, a student’s performance score changes by between -0.022 and 0.015, therefore there is little to no difference between scores in relation to the duration of play time in lessons.\n\n#check requirements\n\n#residuals\nqqPlot(lm_music$residuals)\n\n\n\n\n\n\n\n\n[1] 16 82\n\n#variance\nplot(lm_music, which = 1)\n\n\n\n\n\n\n\n\nResiduals: The residuals are normal\nVariance: The variance is constant\nTrust p-value: Yes, I can trust my p-value\n\n\nAnalyzing the relationship between Lesson Type and Performance Score through independent t.test\n\\[H_0:  \\mu_{Practical} = \\mu_{Theory}\\]\n\\[H_a:\\mu_{P} &gt; \\mu_{T}\\] \\[\\alpha = 0.05\\]\n\n# explore and visualize data\nfavstats(clean_music$Performance_Score ~ clean_music$Lesson_Type)\n\n  clean_music$Lesson_Type      min       Q1   median       Q3      max     mean\n1               Practical 60.32214 70.42106 79.33088 91.90368 99.71868 80.75567\n2                  Theory 60.90163 70.45786 81.01049 88.01304 98.35884 80.09406\n        sd  n missing\n1 12.64735 48       0\n2 10.97366 52       0\n\nggplot(clean_music, aes(y = Performance_Score, x = Lesson_Type, fill = Lesson_Type)) +\n  geom_boxplot() +\n  theme_bw() +\n  labs( title = \"Comparing Performance Score by Lesson Type\")\n\n\n\n\n\n\n\n\nLooking at the boxplot and summary statistics, the theory focused lessons have a slightly larger median of performance scores than practical lessons. However, the variability of performance scores for practical lessons is larger, which may even it out.\n\n#t.test\nt.test(clean_music$Performance_Score ~ clean_music$Lesson_Type, alternative = \"greater\")\n\n\n    Welch Two Sample t-test\n\ndata:  clean_music$Performance_Score by clean_music$Lesson_Type\nt = 0.27839, df = 93.437, p-value = 0.3907\nalternative hypothesis: true difference in means between group Practical and group Theory is greater than 0\n95 percent confidence interval:\n -3.286678       Inf\nsample estimates:\nmean in group Practical    mean in group Theory \n               80.75567                80.09406 \n\n\nt: 0.27839\ndf: 93.437\np-value:0.3907\nInterpretation: The p-value is not less than alpha, therefore I fail to reject the null hypothesis. I do not have sufficient evidence to suggest that students who take practical lessons get higher performance scores than those who take theory lessons.\n\n#confidence interval\nt.test(clean_music$Performance_Score ~ clean_music$Lesson_Type, conf.level = 0.95)$conf.int\n\n[1] -4.057536  5.380770\nattr(,\"conf.level\")\n[1] 0.95\n\n\nConfidence Interval: I am 95% confident that the true difference in performance scores of students who take practical lessons is between 4.058 less points and 5.381 more points than those who take theory lessons.\n\n#check for normality\nqqPlot(clean_music$Performance_Score ~ clean_music$Lesson_Type)\n\n\n\n\n\n\n\n\nNormality: The data is normal\nTrust p-value: Yes, I can trust my p-value\n\n\nAnalyzing the relationship between performance score and age of the student through ANOVA\n\\[H_o: \\mu_{10} = \\mu_{11} = \\mu_{12} = \\mu_{13} = \\mu_{14} = \\mu_{15} = \\mu_{16} = \\mu_{17}\\] \\[H_a: \\text{at least one age is different from the others}\\] \\[\\alpha = 0.05 \\]\n\n#explore and visualize data\nfavstats(clean_music$Performance_Score ~ clean_music$Age)\n\n  clean_music$Age      min       Q1   median       Q3      max     mean\n1              10 62.45821 75.00191 78.73816 83.88848 91.95686 79.15447\n2              11 60.32214 67.64399 81.09731 90.57224 98.34762 79.77874\n3              12 66.59983 78.21241 88.26834 93.86581 99.71868 86.05738\n4              13 69.36536 74.27390 79.27591 86.82123 99.09256 81.83812\n5              14 62.02598 80.92366 89.08685 90.37172 99.27092 85.47973\n6              15 60.90163 68.17329 80.63383 91.77526 95.18108 79.27251\n7              16 61.57539 64.44112 76.94194 90.07525 98.73710 77.54758\n8              17 62.88485 66.49549 70.31074 85.61312 96.74020 76.23158\n         sd  n missing\n1  7.616312 14       0\n2 14.167100 11       0\n3 11.281281 12       0\n4 10.538332 13       0\n5 11.088852  9       0\n6 12.672438 15       0\n7 13.799823 14       0\n8 11.513882 12       0\n\ncategory_order &lt;- c(\"10\", \"11\", \"12\", \"13\", \"14\", \"15\", \"16\", \"17\")\n\nggplot(clean_music, aes(y = Performance_Score, x =factor(Age, levels = category_order), fill = factor(Age, levels = category_order))) +\n  geom_boxplot() +\n  theme_bw() +\n  labs(\n    x = \"Age\",\n    title = \"Comparing Performance Scores by Student Age\",\n    fill = \"Age\")\n\n\n\n\n\n\n\n\nLooking at the summary statistics and the boxplot, age 17’s median does seem to be lower than the others.\n\n#anova test\nmusic_aov &lt;- aov(clean_music$Performance_Score ~ clean_music$Age)\nsummary(music_aov)\n\n                Df Sum Sq Mean Sq F value Pr(&gt;F)\nclean_music$Age  1    178   178.3   1.295  0.258\nResiduals       98  13492   137.7               \n\n\nf: 1.295\ndf: 1\np-value: 0.258\nInterpretation: The p-value is not less than alpha(0.05), therefore I fail to reject the null hypothesis. I do not have sufficient evidence to suggest that the age of the student has a significant affect on their performance score.\n\n#check requirements\n\n#residuals\nqqPlot(music_aov$residuals)\n\n\n\n\n\n\n\n\n[1] 41 39\n\n#standard deviation variability\nsds &lt;- favstats(clean_music$Performance_Score ~ clean_music$Age)$sd\nmax(sds) / min(sds)\n\n[1] 1.8601\n\n\nResiduals: The residuals are normal\nSD: The standard deviations are approximately equal\nTrust p-value: Yes, I can trust my p-value\n\n\n\nConclusion (Take Action)\nFrom my findings, I conclude that neither duration of play time, lesson type, nor age have a significant affect on a student’s performance score. These findings did surprise me a little, as I expected to see a relationship between at least one of them and performance score. However, my findings do imply that no matter what type of lesson a student takes, how long the lesson is, or how old they are, they can still do well in a performance. After analyzing this data, I would be interested in doing some more studies to see what factors do affect a student’s performance score.\n\n\n\n\n Back to top",
     "crumbs": [
-      "Data Cleansing",
-      "Project 2"
+      "Data Analysis",
+      "Music Education"
     ]
+  },
+  {
+    "objectID": "Analysis_Projects/project2.html",
+    "href": "Analysis_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html",
+    "href": "Analysis_Projects/Consulting.html",
+    "title": "Rich Distributing Consulting Project",
+    "section": "",
+    "text": "library(mosaic)\nlibrary(ResourceSelection)\nlibrary(DT)\nlibrary(pander)\nlibrary(car)\nlibrary(tidyverse)\n\nmsm &lt;- read_csv(\"Rich Distributing Quantity and Hours.csv\")",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#background",
+    "href": "Analysis_Projects/Consulting.html#background",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Background",
+    "text": "Background\nRich Distributing is a subset of the first-aid company Shield-Safety, which focuses on selling products made with a supplement called MSM(Methylsulfonylmethane). It helps with a variety of problems, such as arthritis, ulcers, high blood pressure, high cholesterol, etc.\nFor more information on MSM check out the WebMD article about it: https://www.webmd.com/vitamins-and-supplements/msm-methylsulfonylmethane-uses-and-risks\nWhile Rich Distributing sells many different products that use MSM, one of the main ones they produce is MSM tablets, currently sold in 3 sizes of bottle: 175, 250, and 500. At the moment, they have one machine that they use to make the tablets, which poses a few problems. Namely, some tablets are not sturdy enough and must be weeded out, which lowers the amount of production, and if the machine breaks, production is completely halted for a time until it can be fixed. Therefore, the company is considering buying a second tablet machine. However, a new machine costs around $1900.\nFor this analysis, I will compare the amount of tablets made each month to how much the company makes in sales, in order to see if there is a significant relationship between them. If there is, buying a new machine may be worth the high cost.",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#questions-and-hypotheses",
+    "href": "Analysis_Projects/Consulting.html#questions-and-hypotheses",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Questions and Hypotheses",
+    "text": "Questions and Hypotheses\nDoes the amount of tablets made in a month, have a linear relationship with the money made in sales each month?\nLinear Regression Model:\n\\[ Y_i = \\beta_0 + \\beta_1 X_i + \\epsilon_i \\] Slope Hypotheses:\n\\[ \\beta_1 = 0 \\] \\[ \\beta_1 \\ne 0 \\] Level of Significance:\n\\[ \\alpha = 0.05 \\]",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#data-wrangling",
+    "href": "Analysis_Projects/Consulting.html#data-wrangling",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Data Wrangling",
+    "text": "Data Wrangling\nFirst, I used the data I received for how many of each type of bottle was made and sold and combined the types into two new columns: total_made and total_sold. I also made a new column called net_sales, taking the total sales and subtracting the amount paid to the person making the tablets.\n\n#filter\ncomb_msm &lt;- msm %&gt;%\n  mutate(total_sold = MSM175_sold + MSM500_sold + MSM250_sold,\n         total_made = MSM175_made + MSM500_made + MSM250_made,\n         net_sales = sales - paid_amount)\nview(comb_msm)\n\nBelow is a table showing all of the information from the original data, plus the new columns.\n\ndatatable(comb_msm)",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#graphical-and-numerical-summaries",
+    "href": "Analysis_Projects/Consulting.html#graphical-and-numerical-summaries",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Graphical and Numerical Summaries",
+    "text": "Graphical and Numerical Summaries\n\n#scatterplot\nggplot(comb_msm, aes(x = total_made, y = net_sales)) +\n  geom_point(col = \"firebrick\", pch = 16) +\n  geom_smooth(method = \"lm\", col = \"black\") +\n  labs(\n    title = \"Relationship Between Total MSM Bottles Made and the Net Sales Profit\",\n    x = \"Total MSM Bottles Made\",\n    y = \"Net Sales Profit\"\n  ) +\n  theme_bw()\n\n\n\n\n\n\n\n\nLooking at this scatterplot, there seems to be a fairly strong positive linear relationship between the amount of tablets made and how much is made in MSM sales.\nThe correlation coefficient below, shows how strong that relationship is:\n\n#correlation coefficient\npander(cor(net_sales ~ total_made, data = comb_msm))\n\n0.8864\n\n\nThe correlation coefficient confirms and supports what we can see in the scatterplot with a value of 0.8864, which represents a strong positive relationship between the two variables.",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#linear-regression-analysis",
+    "href": "Analysis_Projects/Consulting.html#linear-regression-analysis",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Linear Regression Analysis",
+    "text": "Linear Regression Analysis\n\nmsm.lm &lt;- lm(net_sales ~ total_made, data = comb_msm)\npander(summary(msm.lm))\n\n\n\n\n\n\n\n\n\n\n\n \nEstimate\nStd. Error\nt value\nPr(&gt;|t|)\n\n\n\n\n(Intercept)\n790.9\n668.2\n1.184\n0.2752\n\n\ntotal_made\n19.13\n3.776\n5.067\n0.001452\n\n\n\n\nFitting linear model: net_sales ~ total_made\n\n\n\n\n\n\n\n\nObservations\nResidual Std. Error\n\\(R^2\\)\nAdjusted \\(R^2\\)\n\n\n\n\n9\n1489\n0.7857\n0.7551\n\n\n\n\n\nNext, I did a linear model test on the total bottles made and the net sales profit, to see if the linear relationship is significant enough to say that the slope of the model is not equal to 0. I found the p-value for the slope (0.001452) to be less than the level of significance (0.05), therefore I reject the null hypothesis. I have sufficient evidence to suggest that the number of MSM bottles made has a significant effect on the total money made in sales.\n\nIntercept and Slope Interpretation\nThe fitted linear model, using the values for intercept and slope found in the above test, is: \\[ Y_\\text{net_sales} = 790.9 + 19.13 X_\\text{num_bottles} + \\epsilon_i \\] 790.9 represents the intercept. This means that when 0 bottles are made, the net sales is approximately $790.90.\n19.13 represents the slope. This means that for every one bottle made, the net sales goes up by $19.13, on average.\n\n\nPrediction with Second Machine\nAverage number of bottles made per month:\n\npander(mean(comb_msm$total_made))\n\n118.4\n\n\nAverage net sales per month:\n\npander(mean(comb_msm$net_sales))\n\n3057\n\n\nThe average number of MSM bottles being made every month is 118.4 and the average profit in sales is $3057. Buying a second machine would increase the number of bottles made, so for this analysis I will predict how much the profit would increase if 1.5 times more bottles were made each month, using the fitted linear model from above.\n\\[ 790.9 + 19.13 * (1.5 * 118.4) = 4188.388 \\]\nThrough the linear model, I found that the average monthly sales profit would be $4188.39. Therefore, I predict that buying a second tablet machine would increase profits by approximately $1131, on average, every month.",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#appropriateness-of-the-model",
+    "href": "Analysis_Projects/Consulting.html#appropriateness-of-the-model",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Appropriateness of the Model",
+    "text": "Appropriateness of the Model\n\npar(mfrow = c(1,3))\nplot(msm.lm, which = 1)\nqqPlot(msm.lm$residuals, main = \"Normality\")\n\n[1] 5 1\n\nplot(msm.lm$residuals, main = \"Residuals vs. Order\")\n\n\n\n\n\n\n\n\nThe three above graphs help me to see whether the linear model is appropriate and fits the data. There do seem to be a few outliers in the Residuals vs. Fitted plot, causing the red line to go down and making the data not quite linear. In the Normality plot, although most points are within the blue, making them normal, the outside points are making a slightly different shape from a straight line, which suggests that there may be a different pattern than the one tested for in this analysis. However, the Residuals vs. Order plot shows that the points are independent.\nAlthough some of the requirements for the linear model test were not met, I found this to be the best way to interpret the data, at this time.",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/Consulting.html#conclusionaction-items",
+    "href": "Analysis_Projects/Consulting.html#conclusionaction-items",
+    "title": "Rich Distributing Consulting Project",
+    "section": "Conclusion/Action Items",
+    "text": "Conclusion/Action Items\nIn conclusion, I found that there is a strong positive relationship between the amount of MSM tablets made and the total profit in sales. Although more analyses on data from over a longer period of time may be helpful in confirming the results of this analysis, I still suggest that buying a new machine will increase both productivity and profit for Rich Distributing.\nBy buying a second tablet machine, the number of bottles made each month will increase, and therefore the money made in sales will also increase. My prediction in this analysis showed that sales could increase each month by around $1131 with a second machine, and since the machine costs around 1900 dollars, it will pay for itself after less than 2 months! Alongside this, having a second machine will also help to ensure that production does not stop if one of the machines breaks. Therefore, the benefits of the machine is worth the cost.",
+    "crumbs": [
+      "Data Analysis",
+      "Rich Distributing"
+    ]
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "about me",
+    "section": "",
+    "text": "This section contains projects highlighting my skills in data and statistical analysis\n\n\nProject 1: Rich Distributing\nFor this project, I worked with a first aid company in Utah, Shield Safety, on a consulting project for their subsidiary company, Rich Distributing, to determine whether buying a new tablet machine would increase their productivity and profits.\nProject 2: Music Education\nIn this analysis, I looked at data on private music lessons and performed linear regression, t-test, and ANOVA statistical tests to determine what factors go into making a lesson more effective.",
+    "crumbs": [
+      "Data Analysis"
+    ]
+  },
+  {
+    "objectID": "analysis.html#projects",
+    "href": "analysis.html#projects",
+    "title": "about me",
+    "section": "",
+    "text": "Project 1: Rich Distributing\nFor this project, I worked with a first aid company in Utah, Shield Safety, on a consulting project for their subsidiary company, Rich Distributing, to determine whether buying a new tablet machine would increase their productivity and profits.\nProject 2: Music Education\nIn this analysis, I looked at data on private music lessons and performed linear regression, t-test, and ANOVA statistical tests to determine what factors go into making a lesson more effective.",
+    "crumbs": [
+      "Data Analysis"
+    ]
+  },
+  {
+    "objectID": "Analysis_Projects/project1.html",
+    "href": "Analysis_Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Analysis_Projects/project3.html",
+    "href": "Analysis_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project3.html",
+    "href": "Cleansing_Exploration/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project1.html",
@@ -200,17 +387,17 @@
     "href": "exploration.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
+    "text": "This section contains projects highlighting my skills in data exploration and visualization.\n\n\nProject 1: Is Reading Comprehension Declining?\nIn this analysis, I explored the trend of reading comprehension across the world and compared it to a study on whether medium has an affect on comprehension.",
     "crumbs": [
       "Data Exploration"
     ]
   },
   {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
+    "objectID": "exploration.html#projects",
+    "href": "exploration.html#projects",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
+    "text": "Project 1: Is Reading Comprehension Declining?\nIn this analysis, I explored the trend of reading comprehension across the world and compared it to a study on whether medium has an affect on comprehension.",
     "crumbs": [
       "Data Exploration"
     ]
@@ -291,17 +478,6 @@
     "crumbs": [
       "Story Telling",
       "Project 3"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html",
-    "href": "Cleansing_Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 1"
     ]
   }
 ]

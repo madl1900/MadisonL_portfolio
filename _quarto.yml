@@ -24,8 +24,8 @@ website:
         file: index.qmd
       - text: "My Resume"
         file: resume.qmd
-      - text: "Data Cleansing"
-        file: cleansing.qmd
+      - text: "Data Analysis"
+        file: analysis.qmd
       - text: "Data Exploration"
         file: exploration.qmd
       - text: "Story Telling"
@@ -41,21 +41,18 @@ website:
   # comment out any of the sections below to turn off the sidebar
 
   sidebar: 
-    - title: "Data Cleansing"
+    - title: "Data Analysis"
       style: "docked"
       background: light
       contents:
-        - text: "Data Cleansing"
-          file: cleansing.qmd
+        - text: "Data Analysis"
+          file: analysis.qmd
         - text: "---"
-        - text: "Project 1"
-          file: Cleansing_Projects/project1.qmd
+        - text: "Rich Distributing"
+          file: Analysis_Projects/Consulting.Rmd
         - text: "---"
-        - text: "Project 2"
-          file: Cleansing_Projects/project2.qmd
-        - text: "---"
-        - text: "Project 3"
-          file: Cleansing_Projects/project3.qmd
+        - text: "Music Education"
+          file: Analysis_Projects/Semester_Project_Template.qmd
         - text: "---"
     - title: "Data Exploration"
       style: "docked"
@@ -64,14 +61,8 @@ website:
         - text: "Data Exploration"
           file: exploration.qmd
         - text: "---"
-        - text: "Project 1"
-          file: Cleansing_Exploration/project1.qmd
-        - text: "---"
-        - text: "Project 2"
-          file: Cleansing_Exploration/project2.qmd
-        - text: "---"
-        - text: "Project 3"
-          file: Cleansing_Exploration/project3.qmd
+        - text: "Is Reading Comprehension Declining?"
+          file: Cleansing_Exploration/w13_task3.qmd
         - text: "---"
     - title: "Story Telling"
       style: "docked"

@@ -1,0 +1,19 @@
+---
+title: "about me"
+subtitle: "my data science portfolio"
+# use quarto markdown to 
+---
+
+# Data Analysis
+
+This section contains projects highlighting my skills in data and statistical analysis
+
+## Projects
+
+__Project 1__: Rich Distributing
+
+For this project, I worked with a first aid company in Utah, Shield Safety, on a consulting project for their subsidiary company, Rich Distributing, to determine whether buying a new tablet machine would increase their productivity and profits.
+
+__Project 2__: Music Education
+
+In this analysis, I looked at data on private music lessons and performed linear regression, t-test, and ANOVA statistical tests to determine what factors go into making a lesson more effective.
