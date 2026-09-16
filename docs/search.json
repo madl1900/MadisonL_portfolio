@@ -4,17 +4,7 @@
     "href": "story_telling.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
+    "text": "MarkDown Basics\n\n\n\n Back to top",
     "crumbs": [
       "Story Telling"
     ]
@@ -33,30 +23,30 @@
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "Madison Loutensock’s CV",
+    "title": "Madison Lindsay’s CV",
     "section": "",
-    "text": "Data Science\n\nmadl141900@gmail.com\n\n\n\nI am a junior majoring in Data Science at Brigham Young University - Idaho.\n\n\nSQL, R, Python, Excel, C#, Tableau\n\n\n\n\nJanuary 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah\n\n\n\n\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
+    "text": "Data Science\n\nmadl141900@gmail.com\n\n\n\nI am a junior majoring in Data Science at Brigham Young University - Idaho.\n\n\nSQL, R, Python, Excel, C#, Tableau\n\n\n\n\nJanuary 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah\n\n\n\n\nMay 2026 - present AI Trainer, Handshake\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
-    "title": "Madison Loutensock’s CV",
+    "title": "Madison Lindsay’s CV",
     "section": "",
     "text": "I am a junior majoring in Data Science at Brigham Young University - Idaho.\n\n\nSQL, R, Python, Excel, C#, Tableau"
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
-    "title": "Madison Loutensock’s CV",
+    "title": "Madison Lindsay’s CV",
     "section": "",
     "text": "January 2025 - present Brigham Young University - Idaho | Rexburg, Idaho\nSeptember 2021 - December 2023 Salt Lake Community College | Salt Lake City, Utah"
   },
   {
     "objectID": "resume.html#occupation",
     "href": "resume.html#occupation",
-    "title": "Madison Loutensock’s CV",
+    "title": "Madison Lindsay’s CV",
     "section": "",
-    "text": "January 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
+    "text": "May 2026 - present AI Trainer, Handshake\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
   },
   {
     "objectID": "Machine_Learning/project3.html",
@@ -85,17 +75,7 @@
     "href": "full_stack.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Full Stack"
-    ]
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
+    "text": "MarkDown Basics\n\n\n\n Back to top",
     "crumbs": [
       "Full Stack"
     ]
@@ -418,7 +398,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Madison Loutensock Portfolio\nThis portfolio shows my past and recent projects in data science, regarding data exploration and analysis.\n\n\n\n\n Back to top"
+    "text": "Madison Lindsay Portfolio\nThis portfolio shows my past and recent projects in data science, regarding data exploration and analysis.\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project2.html",
@@ -436,17 +416,7 @@
     "href": "ml.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
+    "text": "MarkDown Basics\n\n\n\n Back to top",
     "crumbs": [
       "Machine Learning"
     ]

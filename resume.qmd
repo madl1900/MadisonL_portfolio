@@ -1,8 +1,8 @@
 ---
 layout: cv
-title: Madison Loutensock's CV
+title: Madison Lindsay's CV
 ---
-# Madison Loutensock
+# Madison Lindsay
 Data Science
 
 <div id="webaddress">
@@ -32,6 +32,8 @@ __Salt Lake Community College | Salt Lake City, Utah__
 
 
 ## Occupation
+`May 2026 - present`
+__AI Trainer__, Handshake
 
 `January 2026 - present`
 __Statistics Teachers Assistant__, BYU-I

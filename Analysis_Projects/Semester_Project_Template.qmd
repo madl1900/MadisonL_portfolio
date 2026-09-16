@@ -1,6 +1,6 @@
 ---
 title: A Study in Factors on Musical Performance
-author: Madison Loutensock
+author: Madison Lindsay
 format:
   html:
     self-contained: true

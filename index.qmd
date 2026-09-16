@@ -1,10 +1,10 @@
 ---
 title: "Home"
-subtitle: "Madison Loutensock Data Science Portfolio"
+subtitle: "Madison Lindsay Data Science Portfolio"
 # use quarto markdown to 
 ---
 
-# Madison Loutensock Portfolio
+# Madison Lindsay Portfolio
 
 This portfolio shows my past and recent projects in data science, regarding data exploration and analysis.
 

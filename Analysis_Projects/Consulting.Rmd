@@ -1,6 +1,6 @@
 ---
 title: "Rich Distributing Consulting Project"
-author: "Madison Loutensock"
+author: "Madison Lindsay"
 date: "2025-07-03"
 output: 
   html_document:
