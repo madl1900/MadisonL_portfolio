@@ -1,6 +1,8 @@
 ---
 title: "Is Reading Comprehension Declining?"
-format: html
+format: 
+  html:
+    code-fold: true
 ---
 
 ```{r, message = FALSE}
