@@ -6,5 +6,5 @@ subtitle: "Madison Lindsay Data Science Portfolio"
 
 # Madison Lindsay Portfolio
 
-This portfolio shows my past and recent projects in data science, regarding data exploration and analysis.
+This portfolio shows my past and recent projects in data science. It includes projects in data analysis, data exploration, database creation, and programming.
 
