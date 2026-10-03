@@ -64,15 +64,15 @@ website:
         - text: "Is Reading Comprehension Declining?"
           file: Cleansing_Exploration/w13_task3.qmd
         - text: "---"
-    - title: "Story Telling"
+    - title: "Programming"
       style: "docked"
       background: light
       contents:
-        - text: "Story Telling"
+        - text: "Programming"
           file: story_telling.qmd
         - text: "---"
-        - text: "Project 1"
-          file: Story_Telling/college_fantasy.py
+        - text: "College Fantasy Football"
+          file: Story_Telling/college_fantasy_quarto.qmd
         - text: "---"
         - text: "Project 2"
           file: Story_Telling/project2.qmd

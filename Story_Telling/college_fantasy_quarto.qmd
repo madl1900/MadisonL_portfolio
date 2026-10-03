@@ -1,5 +1,5 @@
 ---
-title: "Music Practice Room Program"
+title: "College Fantasy Python Program"
 author: "Madison Lindsay"
 format:
   html:
@@ -21,8 +21,8 @@ format:
         caption: See code
 execute: 
   warning: false
-    
 ---
 
 # Git Hub Code Link
-https://github.com/madl1900/MadisonL_portfolio/tree/main/Story_Telling/PracticeRoom
+
+https://github.com/madl1900/MadisonL_portfolio/blob/main/Story_Telling/college_fantasy.py
