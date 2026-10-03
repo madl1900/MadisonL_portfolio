@@ -8,6 +8,6 @@ This section contains projects highlighting my skills in data exploration and vi
 
 ## Projects
 
-__Project 1__: [Is Reading Comprehension Declining?](w13_task3.qmd)
+__Project 1__: [Is Reading Comprehension Declining?](/Cleansing_Exploration/w13_task3.qmd)
 
 In this analysis, I explored the trend of reading comprehension across the world and compared it to a study on whether medium has an affect on comprehension.
