@@ -1,5 +1,5 @@
 ---
-title: "Sheet Music SQL Database"
+title: "Music Practice Room Program"
 author: "Madison Lindsay"
 format:
   html:
@@ -24,17 +24,8 @@ execute:
     
 ---
 
-# ERD
+# Music Practice Room Program
 
-images/sheet_music_erd.svg
+### Git Hub Code Link
 
-# Git Hub Code Links
-
-__MySQL__: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/MySQL
-
-__SQL Server__: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/SQL_Server
-
-```{r}
-
-```
-
+https://github.com/madl1900/MadisonL_portfolio/tree/main/Story_Telling/PracticeRoom

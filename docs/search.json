@@ -6,7 +6,6 @@
     "section": "",
     "text": "This section contains projects highlighting my skills in Python and C#.\n\n\nProject 1: College Fantasy Football\nThis program creates, keeps track of, and scores a college fantasy football league, using the principle of programming with functions. It also uses .txt files to store information for the league.\n\n\n\nProject 1: Music Practice Room\nThis program works as a practice log for musicians. It keeps track of all practice entries, including songs practiced and scales used. It also has a metronome built in.",
     "crumbs": [
-      "Story Telling",
       "Programming"
     ]
   },
@@ -17,7 +16,6 @@
     "section": "",
     "text": "Project 1: College Fantasy Football\nThis program creates, keeps track of, and scores a college fantasy football league, using the principle of programming with functions. It also uses .txt files to store information for the league.",
     "crumbs": [
-      "Story Telling",
       "Programming"
     ]
   },
@@ -28,29 +26,24 @@
     "section": "",
     "text": "Project 1: Music Practice Room\nThis program works as a practice log for musicians. It keeps track of all practice entries, including songs practiced and scales used. It also has a metronome built in.",
     "crumbs": [
-      "Story Telling",
       "Programming"
     ]
   },
   {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
-    "title": "Music Practice Room Program",
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
+    "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Git Hub Code Link\nhttps://github.com/madl1900/MadisonL_portfolio/tree/main/Story_Telling/PracticeRoom\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Story_Telling/college_fantasy_quarto.html",
     "href": "Story_Telling/college_fantasy_quarto.html",
     "title": "College Fantasy Python Program",
     "section": "",
-    "text": "Git Hub Code Link\nhttps://github.com/madl1900/MadisonL_portfolio/blob/main/Story_Telling/college_fantasy.py\n\n\n\n\n Back to top",
+    "text": "College Fantasy Football Program\n\nGit Hub Code Link\nhttps://github.com/madl1900/MadisonL_portfolio/blob/main/Story_Telling/college_fantasy.py\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Story Telling",
+      "Programming",
       "College Fantasy Football"
     ]
   },
@@ -59,21 +52,14 @@
     "href": "ml.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning"
-    ]
+    "text": "MarkDown Basics\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project2.html",
     "href": "Machine_Learning/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -83,14 +69,14 @@
     "text": "Madison Lindsay Portfolio\nThis portfolio shows my past and recent projects in data science, regarding data exploration and analysis.\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Full_Stack/project2.html",
-    "href": "Full_Stack/project2.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Full_Stack/sheet_music_db.html",
+    "href": "Full_Stack/sheet_music_db.html",
+    "title": "Sheet Music SQL Database",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "text": "Sheet Music SQL Database\n\nERD\n\n\n\nGit Hub Code Links\nMySQL: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/MySQL\nSQL Server: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/SQL_Server\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Full Stack",
-      "Project 2"
+      "Database Creation",
+      "Sheet Music Database"
     ]
   },
   {
@@ -118,22 +104,14 @@
     "href": "Competition/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competitions",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Competition/project1.html",
     "href": "Competition/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competitions",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Cleansing_Exploration/project3.html",
@@ -356,53 +334,47 @@
     "href": "Competition/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competitions",
-      "Project 2"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "competition.html",
     "href": "competition.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competitions",
-      "Competition"
-    ]
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "competition.html#title-2-header",
     "href": "competition.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competitions",
-      "Competition"
-    ]
+    "text": "MarkDown Basics"
   },
   {
-    "objectID": "Full_Stack/project1.html",
-    "href": "Full_Stack/project1.html",
-    "title": "Sheet Music SQL Database",
+    "objectID": "Full_Stack/project2.html",
+    "href": "Full_Stack/project2.html",
+    "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "ERD\nimages/sheet_music_erd.svg\n\n\nGit Hub Code Links\nMySQL: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/MySQL\nSQL Server: https://github.com/madl1900/MadisonL_portfolio/tree/main/Full_Stack/sheet_music/SQL_Server\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Full Stack",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "full_stack.html",
     "href": "full_stack.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics\n\n\n\n Back to top",
+    "text": "This section contains projects highlighting my skills in database creation.\n\n\nProject 1: Sheet Music Database\nAs a musician, I have a lot of sheet music in a variety of different places. I created this database to help keep track of and organize all of my music. I have two versions, one in MySQL and the other in SQL Server.",
     "crumbs": [
-      "Full Stack"
+      "Database Creation"
+    ]
+  },
+  {
+    "objectID": "full_stack.html#projects",
+    "href": "full_stack.html#projects",
+    "title": "about me",
+    "section": "",
+    "text": "Project 1: Sheet Music Database\nAs a musician, I have a lot of sheet music in a variety of different places. I created this database to help keep track of and organize all of my music. I have two versions, one in MySQL and the other in SQL Server.",
+    "crumbs": [
+      "Database Creation"
     ]
   },
   {
@@ -410,22 +382,14 @@
     "href": "Machine_Learning/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 1"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Machine_Learning/project3.html",
     "href": "Machine_Learning/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "resume.html",
@@ -456,21 +420,21 @@
     "text": "May 2026 - present AI Trainer, Handshake\nJanuary 2026 - present Statistics Teachers Assistant, BYU-I\nMarch 2021 - present Piano Teacher, The Piano Place"
   },
   {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Story_Telling/practice_room.html",
+    "href": "Story_Telling/practice_room.html",
+    "title": "Music Practice Room Program",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Music Practice Room Program\n\nGit Hub Code Link\nhttps://github.com/madl1900/MadisonL_portfolio/tree/main/Story_Telling/PracticeRoom\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Programming",
+      "Music Practice Room"
+    ]
   },
   {
     "objectID": "Story_Telling/project3.html",
     "href": "Story_Telling/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 3"
-    ]
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   }
 ]
