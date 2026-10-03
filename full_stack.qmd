@@ -1,15 +1,12 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
+title: "Database Creation"
 # use quarto markdown to 
 ---
-
-# Database Creation
 
 This section contains projects highlighting my skills in database creation.
 
 ## Projects
 
-__Project 1__: Sheet Music Database
+__Project 1__: [Sheet Music Database](sheet_music_db.qmd)
 
 As a musician, I have a lot of sheet music in a variety of different places. I created this database to help keep track of and organize all of my music. I have two versions, one in MySQL and the other in SQL Server.

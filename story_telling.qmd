@@ -1,21 +1,18 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
+title: "Programming"
 # use quarto markdown to 
 ---
-
-# Programming
 
 This section contains projects highlighting my skills in Python and C#.
 
 ## Python Projects
 
-__Project 1__: College Fantasy Football
+__Project 1__: [College Fantasy Football](college_fantasy_quarto.qmd)
 
 This program creates, keeps track of, and scores a college fantasy football league, using the principle of programming with functions. It also uses .txt files to store information for the league.
 
 ## C# Projects
 
-__Project 1__: Music Practice Room
+__Project 1__: [Music Practice Room](practice_room.qmd)
 
 This program works as a practice log for musicians. It keeps track of all practice entries, including songs practiced and scales used. It also has a metronome built in.
