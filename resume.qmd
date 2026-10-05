@@ -35,12 +35,22 @@ __Salt Lake Community College | Salt Lake City, Utah__
 `May 2026 - present`
 __AI Trainer__, Handshake
 
+* Processed and examined 30 AI responses per day based on various different prompts to analyze effectiveness 
+* Helped train AI models in 5 media types: text, image, video, chat, and audio
+
 `January 2026 - present`
 __Statistics Teachers Assistant__, BYU-I
+
+* Collaborated with professors in helping 30 students learn how to perform statistical analyses using R and R Studio 
+* Graded 15 statistical analyses per week on quality, clarity, and visualization
 
 
 `March 2021 - present`
 __Piano Teacher__, The Piano Place
+
+* Taught music skills to an average of 40 students, ages 5-30, in private lessons, and developed individual lesson plans adhering to each student's needs 
+* Created visualizations of music theory concepts to help students understand and practice more efficiently 
+* Communicated, in-person and online, with clients to reschedule lessons, build relationships, and maintain student progress 
 
 
 

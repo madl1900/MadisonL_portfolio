@@ -106,7 +106,7 @@ Next, I did a linear model test on the total bottles made and the net sales prof
 ### Intercept and Slope Interpretation
 
 The fitted linear model, using the values for intercept and slope found in the above test, is:
-$$ Y_\text{net_sales} = 790.9 + 19.13 X_\text{num_bottles} + \epsilon_i $$
+$$ Y_{\text{net_sales}} = 790.9 + 19.13 X_{\text{num_bottles}} + \epsilon_i $$
 790.9 represents the intercept. This means that when 0 bottles are made, the net sales is approximately $790.90.
 
 19.13 represents the slope. This means that for every one bottle made, the net sales goes up by $19.13, on average.
