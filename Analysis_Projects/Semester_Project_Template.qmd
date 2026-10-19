@@ -35,7 +35,7 @@ When I was first looking for data to analyze, my research question was "Does tak
 
 # Describe/Summarize the Data
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 #read in libraries and dataset
 library(tidyverse)
 library(mosaic)
@@ -47,18 +47,18 @@ library(car)
 setwd("C:/Users/madl1/OneDrive/Desktop/Student_Work/6-Semester_Project")
 
 music <- read_csv("music_education_dataset.csv")
-view(music)
+#view(music)
 
 #clean up data
-unique(music$Lesson_Type)
-unique(music$Age)
+#unique(music$Lesson_Type)
+#unique(music$Age)
 
 clean_music <- music %>%
   filter(Performance_Score >= 60,
          Performance_Score <= 100) %>%
   select(Performance_Score, Duration, Lesson_Type, Age, Stress_Level)
 
-view(clean_music)
+#view(clean_music)
 ```
 
 # Make Inference
